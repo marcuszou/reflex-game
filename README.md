@@ -25,31 +25,24 @@ Powered by [reflex.dev](https://reflex.dev/)
     ## Install node.js 22
     sudo apt install nodejs -y
     ## brew install node@22
-    
-    ## Install the `bun` package manager for later use with Reflex
-    ## If you have Node.js v20+ installed, this is not neccessary!
-    # curl -fsSL https://bun.sh/install | bash
-    ## activate the .bashrc to make sure `bun` is accessible
-    # source ~/.bashrc
     ```
 2. Create venv and give a go
     ```shell
     ## Make project directory
     mkdir reflex-game
     cd reflex-game
-    ## create a venv named as '.venv'
+    ## create ans activate a venv named as '.venv'
     python3 -m venv .venv
-    ## activate it
     source .venv/bin/activate
     ## list the modules in the .venv (only 'pip' itself)
-    pip list
+    # pip list
     ## Optuioally upgrade pip
     pip install --upgrade pip
     
     ## Ensure the python3 and pip are from the .venv, 
     ## if output is like "/usr/bin/", then remake the .venv
-    which python3
-    which pip
+    # which python3
+    # which pip
     ```
     Note: <font color="red">The ops below are in the Virtual Environment.</font>
     
@@ -62,10 +55,11 @@ Powered by [reflex.dev](https://reflex.dev/)
     ```
 4. Give a go
     ```shell
-    reflex init --template empty
+    reflex init
+    ## reflex init --template empty
     ```
     It will prompt you some templates to select with, choose '0' which represents 'empty'. 
-
+    
     And the process will generate quite a few files in the project folder.
 5. Install some extra python modules: pandas, numpy, etc. (please do)
     ```shell
@@ -88,7 +82,7 @@ Powered by [reflex.dev](https://reflex.dev/)
 
 ## The Game: Real-Time Number Guessing
 
-Now let’s create for real a game with Reflex: a simple yet engaging number guessing game! This game will allow players to guess a secret number within a specified range, receiving instant feedback on their guesses.
+Now let’s create for real a game with Reflex: a simple yet engaging number guessing game! This game will allow players to guess a secret number within a specified range, receiving instant feedback on their guesses. This file is located in the folder of `project/reflex-game/reflex-game.py`.
 
 ```
 import reflex as rx
